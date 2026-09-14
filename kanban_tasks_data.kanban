@@ -1,0 +1,74 @@
+{
+	"categories": [
+		{
+			"uuid": "f12eb4b5-d513-4d21-a36a-4fdd30cf1bf2",
+			"title": "Task",
+			"color": "569eff"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "5e054e1f-f093-45aa-acc6-038bc18df787",
+			"title": "Todo",
+			"tasks": [
+				"a33d4196-9eb8-4eb8-b3cd-2478d4711cd5",
+				"81572d4b-7ca6-4e6c-a99e-81b25947db79",
+				"b40abfb6-0bb2-4708-8e68-a19bee211484",
+				"c8ec085b-f778-46bc-9688-f96e6dfda189"
+			]
+		},
+		{
+			"uuid": "01e3a6f6-690c-4977-aed3-c2e1cf5004bd",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "bc83d5b1-d3db-4666-9eac-4be9250799a5",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "a33d4196-9eb8-4eb8-b3cd-2478d4711cd5",
+			"title": "Crear Menú Principal",
+			"description": "",
+			"category": "f12eb4b5-d513-4d21-a36a-4fdd30cf1bf2",
+			"steps": []
+		},
+		{
+			"uuid": "81572d4b-7ca6-4e6c-a99e-81b25947db79",
+			"title": "Crear Minijuegos (MGs)",
+			"description": "",
+			"category": "f12eb4b5-d513-4d21-a36a-4fdd30cf1bf2",
+			"steps": []
+		},
+		{
+			"uuid": "b40abfb6-0bb2-4708-8e68-a19bee211484",
+			"title": "MG : Guess the Number [LINEAR MATH]",
+			"description": "Ingresa un valor entre 00000 y 99999 donde se muestre si el número es menor o mayor al objetivo, además muestra si hay números que corresponden a la ubicación y/o la presencia del número",
+			"category": "f12eb4b5-d513-4d21-a36a-4fdd30cf1bf2",
+			"steps": []
+		},
+		{
+			"uuid": "c8ec085b-f778-46bc-9688-f96e6dfda189",
+			"title": "MG : Go To Finish Line",
+			"description": "Escribe la ruta de un puntero para que llegue a la meta, esta estará en un punto dentro de un laberinto generado proceduralmente.",
+			"category": "f12eb4b5-d513-4d21-a36a-4fdd30cf1bf2",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"5e054e1f-f093-45aa-acc6-038bc18df787"
+			],
+			[
+				"01e3a6f6-690c-4977-aed3-c2e1cf5004bd"
+			],
+			[
+				"bc83d5b1-d3db-4666-9eac-4be9250799a5"
+			]
+		]
+	}
+}
