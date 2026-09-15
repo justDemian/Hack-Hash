@@ -14,7 +14,8 @@
 				"a33d4196-9eb8-4eb8-b3cd-2478d4711cd5",
 				"81572d4b-7ca6-4e6c-a99e-81b25947db79",
 				"b40abfb6-0bb2-4708-8e68-a19bee211484",
-				"c8ec085b-f778-46bc-9688-f96e6dfda189"
+				"c8ec085b-f778-46bc-9688-f96e6dfda189",
+				"1e87cde3-de99-486b-82ff-64ead6c2900a"
 			]
 		},
 		{
@@ -54,6 +55,13 @@
 			"uuid": "c8ec085b-f778-46bc-9688-f96e6dfda189",
 			"title": "MG : Go To Finish Line",
 			"description": "Escribe la ruta de un puntero para que llegue a la meta, esta estará en un punto dentro de un laberinto generado proceduralmente.",
+			"category": "f12eb4b5-d513-4d21-a36a-4fdd30cf1bf2",
+			"steps": []
+		},
+		{
+			"uuid": "1e87cde3-de99-486b-82ff-64ead6c2900a",
+			"title": "Quemar Identidad",
+			"description": "Cuando alcanzas un máximo de alerta, puedes partir de 0, con una nueva identidad, esto te da prestigio y te ofrece repetir el ciclo de juego para llegar cada vez más lejos.",
 			"category": "f12eb4b5-d513-4d21-a36a-4fdd30cf1bf2",
 			"steps": []
 		}
