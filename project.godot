@@ -11,11 +11,15 @@ config_version=5
 [application]
 
 config/name="Hack&Hash"
+config/description="Prepárate para romper el código... Entiendes? Romper?... Hack en Inglés? eh bueno... Es bastante auto explicativo, entra y siéntete como un hacker ochentero. Eso es todo. Disfruta el Demo :)"
+config/version="0.0.1"
 config/features=PackedStringArray("4.7", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://car0dkwx7qqca"
 
 [display]
 
+window/size/viewport_width=720
+window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -29,5 +33,6 @@ enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg")
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
