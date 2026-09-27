@@ -4,25 +4,31 @@
 
 [node name="Control" type="Node2D" unique_id=136488531]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2033223279]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=430482190]
 
-[node name="NumPad2" type="GridContainer" parent="AnimatedSprite2D" unique_id=1392374382]
-offset_right = 600.0
-offset_bottom = 800.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
+[node name="NumPad2" type="GridContainer" parent="Camera2D" unique_id=1392374382]
+custom_maximum_size = Vector2(480, 640)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 columns = 3
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
-[node name="Num1" type="Button" parent="AnimatedSprite2D/NumPad2" unique_id=1355363492]
+[node name="Num1" type="Button" parent="Camera2D/NumPad2" unique_id=1355363492]
 custom_minimum_size = Vector2(160, 160)
 custom_maximum_size = Vector2(160, 160)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_e6am6")
 theme_override_font_sizes/font_size = 40
 text = "1"
 
-[node name="Num2" type="Button" parent="AnimatedSprite2D/NumPad2" unique_id=1675386523]
+[node name="Num2" type="Button" parent="Camera2D/NumPad2" unique_id=1675386523]
 custom_minimum_size = Vector2(160, 160)
 custom_maximum_size = Vector2(160, 160)
 layout_mode = 2
@@ -30,7 +36,7 @@ theme_override_fonts/font = ExtResource("1_e6am6")
 theme_override_font_sizes/font_size = 40
 text = "2"
 
-[node name="Num3" type="Button" parent="AnimatedSprite2D/NumPad2" unique_id=1841884130]
+[node name="Num3" type="Button" parent="Camera2D/NumPad2" unique_id=1841884130]
 custom_minimum_size = Vector2(160, 160)
 custom_maximum_size = Vector2(160, 160)
 layout_mode = 2
@@ -38,7 +44,7 @@ theme_override_fonts/font = ExtResource("1_e6am6")
 theme_override_font_sizes/font_size = 40
 text = "3"
 
-[node name="Num4" type="Button" parent="AnimatedSprite2D/NumPad2" unique_id=1399208930]
+[node name="Num4" type="Button" parent="Camera2D/NumPad2" unique_id=1399208930]
 custom_minimum_size = Vector2(160, 160)
 custom_maximum_size = Vector2(160, 160)
 layout_mode = 2
@@ -46,7 +52,7 @@ theme_override_fonts/font = ExtResource("1_e6am6")
 theme_override_font_sizes/font_size = 40
 text = "4"
 
-[node name="Num5" type="Button" parent="AnimatedSprite2D/NumPad2" unique_id=560573833]
+[node name="Num5" type="Button" parent="Camera2D/NumPad2" unique_id=560573833]
 custom_minimum_size = Vector2(160, 160)
 custom_maximum_size = Vector2(160, 160)
 layout_mode = 2
@@ -54,7 +60,7 @@ theme_override_fonts/font = ExtResource("1_e6am6")
 theme_override_font_sizes/font_size = 40
 text = "5"
 
-[node name="Num6" type="Button" parent="AnimatedSprite2D/NumPad2" unique_id=1026274289]
+[node name="Num6" type="Button" parent="Camera2D/NumPad2" unique_id=1026274289]
 custom_minimum_size = Vector2(160, 160)
 custom_maximum_size = Vector2(160, 160)
 layout_mode = 2
@@ -62,7 +68,7 @@ theme_override_fonts/font = ExtResource("1_e6am6")
 theme_override_font_sizes/font_size = 40
 text = "6"
 
-[node name="Num7" type="Button" parent="AnimatedSprite2D/NumPad2" unique_id=1874614960]
+[node name="Num7" type="Button" parent="Camera2D/NumPad2" unique_id=1874614960]
 custom_minimum_size = Vector2(160, 160)
 custom_maximum_size = Vector2(160, 160)
 layout_mode = 2
@@ -70,7 +76,7 @@ theme_override_fonts/font = ExtResource("1_e6am6")
 theme_override_font_sizes/font_size = 40
 text = "7"
 
-[node name="Num8" type="Button" parent="AnimatedSprite2D/NumPad2" unique_id=1715771284]
+[node name="Num8" type="Button" parent="Camera2D/NumPad2" unique_id=1715771284]
 custom_minimum_size = Vector2(160, 160)
 custom_maximum_size = Vector2(160, 160)
 layout_mode = 2
@@ -78,7 +84,7 @@ theme_override_fonts/font = ExtResource("1_e6am6")
 theme_override_font_sizes/font_size = 40
 text = "8"
 
-[node name="Num9" type="Button" parent="AnimatedSprite2D/NumPad2" unique_id=1557621357]
+[node name="Num9" type="Button" parent="Camera2D/NumPad2" unique_id=1557621357]
 custom_minimum_size = Vector2(160, 160)
 custom_maximum_size = Vector2(160, 160)
 layout_mode = 2
@@ -86,7 +92,7 @@ theme_override_fonts/font = ExtResource("1_e6am6")
 theme_override_font_sizes/font_size = 40
 text = "9"
 
-[node name="Num10" type="Button" parent="AnimatedSprite2D/NumPad2" unique_id=237507813]
+[node name="Num10" type="Button" parent="Camera2D/NumPad2" unique_id=237507813]
 custom_minimum_size = Vector2(160, 160)
 custom_maximum_size = Vector2(160, 160)
 layout_mode = 2
@@ -94,7 +100,7 @@ theme_override_fonts/font = ExtResource("1_e6am6")
 theme_override_font_sizes/font_size = 40
 text = "*"
 
-[node name="Num11" type="Button" parent="AnimatedSprite2D/NumPad2" unique_id=243943450]
+[node name="Num11" type="Button" parent="Camera2D/NumPad2" unique_id=243943450]
 custom_minimum_size = Vector2(160, 160)
 custom_maximum_size = Vector2(160, 160)
 layout_mode = 2
@@ -102,7 +108,7 @@ theme_override_fonts/font = ExtResource("1_e6am6")
 theme_override_font_sizes/font_size = 40
 text = "0"
 
-[node name="Num12" type="Button" parent="AnimatedSprite2D/NumPad2" unique_id=1148056929]
+[node name="Num12" type="Button" parent="Camera2D/NumPad2" unique_id=1148056929]
 custom_minimum_size = Vector2(160, 160)
 custom_maximum_size = Vector2(160, 160)
 layout_mode = 2
