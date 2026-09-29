@@ -84,7 +84,7 @@ layout_mode = 0
 offset_right = 400.0
 offset_bottom = 40.0
 
-[node name="InfoLabel" type="Label" parent="Control/Info/CenterContainer" unique_id=1390529301]
+[node name="Label" type="Label" parent="Control/Info/CenterContainer" unique_id=1390529301]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_e6am6")
 theme_override_font_sizes/font_size = 24
@@ -105,74 +105,62 @@ columns = 3
 [node name="Button1" type="Button" parent="Control/NumPad/GridContainer" unique_id=1305665293]
 custom_minimum_size = Vector2(140, 90)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "1"
 
 [node name="Button2" type="Button" parent="Control/NumPad/GridContainer" unique_id=1314770011]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "2
 "
 
 [node name="Button3" type="Button" parent="Control/NumPad/GridContainer" unique_id=710123111]
 custom_minimum_size = Vector2(140, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "3"
 
 [node name="Button4" type="Button" parent="Control/NumPad/GridContainer" unique_id=1581425297]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "4"
 
 [node name="Button5" type="Button" parent="Control/NumPad/GridContainer" unique_id=631439976]
 custom_minimum_size = Vector2(100, 90)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "5"
 
 [node name="Button6" type="Button" parent="Control/NumPad/GridContainer" unique_id=2088738644]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "6"
 
 [node name="Button7" type="Button" parent="Control/NumPad/GridContainer" unique_id=154816437]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "7"
 
 [node name="Button8" type="Button" parent="Control/NumPad/GridContainer" unique_id=1165621295]
 custom_minimum_size = Vector2(100, 90)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "8"
 
 [node name="Button9" type="Button" parent="Control/NumPad/GridContainer" unique_id=1797075237]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "9"
 
-[node name="ButtonB" type="Button" parent="Control/NumPad/GridContainer" unique_id=893619353]
+[node name="ButtonA" type="Button" parent="Control/NumPad/GridContainer" unique_id=893619353]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "*"
 
 [node name="Button0" type="Button" parent="Control/NumPad/GridContainer" unique_id=1170640173]
 custom_minimum_size = Vector2(100, 90)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "0"
 
-[node name="ButtonA" type="Button" parent="Control/NumPad/GridContainer" unique_id=768610670]
+[node name="ButtonB" type="Button" parent="Control/NumPad/GridContainer" unique_id=768610670]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "#"
 
 [node name="Timer" type="Timer" parent="." unique_id=1758995358]
@@ -188,4 +176,3 @@ wait_time = 90.0
 [connection signal="pressed" from="Control/NumPad/GridContainer/Button8" to="." method="_on_button_8_pressed"]
 [connection signal="pressed" from="Control/NumPad/GridContainer/Button9" to="." method="_on_button_9_pressed"]
 [connection signal="pressed" from="Control/NumPad/GridContainer/Button0" to="." method="_on_button_0_pressed"]
-[connection signal="pressed" from="Control/NumPad/GridContainer/ButtonA" to="." method="_on_button_a_pressed"]
