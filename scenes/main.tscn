@@ -1,11 +1,39 @@
 [gd_scene format=3 uid="uid://dgeeqj5pynk4h"]
 
-[node name="Main" type="Control" unique_id=515355595]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[ext_resource type="Script" uid="uid://vutg15pdbbgj" path="res://scripts/main.gd" id="1_o5qli"]
 
-[node name="GameController" type="Node2D" parent="." unique_id=64997461]
+[node name="MainMenu" type="Node2D" unique_id=146924219]
+script = ExtResource("1_o5qli")
+
+[node name="ButtonManager" type="Control" parent="." unique_id=1300126940]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 449.0
+offset_bottom = 803.0
+
+[node name="Start" type="Button" parent="ButtonManager" unique_id=878285438]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 428.0
+offset_right = 450.0
+offset_bottom = 506.0
+text = "Empezar"
+
+[node name="Options" type="Button" parent="ButtonManager" unique_id=1048910723]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 2.0
+offset_right = 450.0
+offset_bottom = 49.0
+text = "Opciones"
+
+[node name="Exit" type="Button" parent="ButtonManager" unique_id=189751072]
+layout_mode = 0
+offset_top = 743.0
+offset_right = 449.0
+offset_bottom = 798.0
+text = "Salir"
+
+[connection signal="pressed" from="ButtonManager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ButtonManager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ButtonManager/Exit" to="." method="_on_exit_pressed"]
