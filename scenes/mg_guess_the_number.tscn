@@ -3,6 +3,9 @@
 [ext_resource type="FontFile" uid="uid://48g51questg8" path="res://fonts/monofonto rg.otf" id="1_e6am6"]
 [ext_resource type="Script" uid="uid://cr8auedr4k2li" path="res://scripts/mg_guess_the_number.gd" id="1_fx0ak"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fx0ak"]
+bg_color = Color(0, 0, 0, 0)
+
 [node name="GameAdmin" type="Node2D" unique_id=136488531]
 script = ExtResource("1_fx0ak")
 
@@ -32,7 +35,7 @@ layout_mode = 0
 offset_left = 50.0
 offset_top = 100.0
 offset_right = 400.0
-offset_bottom = 250.0
+offset_bottom = 300.0
 color = Color(0.13319641, 0.13319641, 0.13319638, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="Control/NumberPanel" unique_id=2060759616]
@@ -41,42 +44,73 @@ layout_mode = 0
 offset_right = 350.0
 offset_bottom = 154.0
 
-[node name="Reset" type="Button" parent="Control/NumberPanel/CenterContainer" unique_id=1873250694]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/NumberPanel/CenterContainer" unique_id=1485405247]
 layout_mode = 2
+alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/NumberPanel/CenterContainer" unique_id=855287916]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/NumberPanel/CenterContainer/VBoxContainer" unique_id=183384607]
 layout_mode = 2
+alignment = 1
 
-[node name="Num0" type="Label" parent="Control/NumberPanel/CenterContainer/HBoxContainer" unique_id=1269106006]
+[node name="LastNum0" type="Label" parent="Control/NumberPanel/CenterContainer/VBoxContainer/HBoxContainer2" unique_id=1106884097]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_e6am6")
-theme_override_font_sizes/font_size = 128
-text = "-"
+theme_override_font_sizes/font_size = 64
 
-[node name="Num1" type="Label" parent="Control/NumberPanel/CenterContainer/HBoxContainer" unique_id=1269107100]
+[node name="LastNum1" type="Label" parent="Control/NumberPanel/CenterContainer/VBoxContainer/HBoxContainer2" unique_id=1308959341]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_e6am6")
-theme_override_font_sizes/font_size = 128
-text = "-"
+theme_override_font_sizes/font_size = 64
 
-[node name="Num2" type="Label" parent="Control/NumberPanel/CenterContainer/HBoxContainer" unique_id=1955178021]
+[node name="LastNum2" type="Label" parent="Control/NumberPanel/CenterContainer/VBoxContainer/HBoxContainer2" unique_id=876479211]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_e6am6")
-theme_override_font_sizes/font_size = 128
-text = "-"
+theme_override_font_sizes/font_size = 64
 
-[node name="Num3" type="Label" parent="Control/NumberPanel/CenterContainer/HBoxContainer" unique_id=42073370]
+[node name="LastNum3" type="Label" parent="Control/NumberPanel/CenterContainer/VBoxContainer/HBoxContainer2" unique_id=294391223]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_e6am6")
-theme_override_font_sizes/font_size = 128
+theme_override_font_sizes/font_size = 64
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/NumberPanel/CenterContainer/VBoxContainer" unique_id=855287916]
+layout_mode = 2
+alignment = 1
+
+[node name="Num0" type="Label" parent="Control/NumberPanel/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1269106006]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_e6am6")
+theme_override_font_sizes/font_size = 96
 text = "-"
+
+[node name="Num1" type="Label" parent="Control/NumberPanel/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1269107100]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_e6am6")
+theme_override_font_sizes/font_size = 96
+text = "-"
+
+[node name="Num2" type="Label" parent="Control/NumberPanel/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1955178021]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_e6am6")
+theme_override_font_sizes/font_size = 96
+text = "-"
+
+[node name="Num3" type="Label" parent="Control/NumberPanel/CenterContainer/VBoxContainer/HBoxContainer" unique_id=42073370]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_e6am6")
+theme_override_font_sizes/font_size = 96
+text = "-"
+
+[node name="Clear" type="Button" parent="Control/NumberPanel/CenterContainer" unique_id=1047491062]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_fx0ak")
 
 [node name="Info" type="ColorRect" parent="Control" unique_id=1229711906]
 layout_mode = 0
 offset_left = 25.0
-offset_top = 300.0
+offset_top = 350.0
 offset_right = 425.0
-offset_bottom = 340.0
+offset_bottom = 390.0
 color = Color(0.15487596, 0.154876, 0.15487596, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="Control/Info" unique_id=2026730627]
@@ -178,7 +212,68 @@ text = "#"
 
 [node name="Timer" type="Timer" parent="." unique_id=1758995358]
 wait_time = 90.0
+one_shot = true
 
+[node name="GameOver" type="Control" parent="." unique_id=308201654]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="GameOver" unique_id=1810629731]
+custom_minimum_size = Vector2(450, 800)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.8)
+
+[node name="CenterContainer" type="CenterContainer" parent="GameOver/ColorRect" unique_id=1359760110]
+custom_minimum_size = Vector2(450, 800)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOver/ColorRect/CenterContainer" unique_id=775028620]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+alignment = 1
+
+[node name="GameOverTitle" type="Label" parent="GameOver/ColorRect/CenterContainer/VBoxContainer" unique_id=69781543]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_e6am6")
+theme_override_font_sizes/font_size = 48
+text = "REPORTADO"
+horizontal_alignment = 1
+
+[node name="GameOverSubTitle" type="Label" parent="GameOver/ColorRect/CenterContainer/VBoxContainer" unique_id=248654690]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_fonts/font = ExtResource("1_e6am6")
+theme_override_font_sizes/font_size = 20
+text = "TU IP FUE PUESTA EN LA LISTA NEGRA"
+horizontal_alignment = 1
+
+[node name="Restart" type="Button" parent="GameOver/ColorRect/CenterContainer/VBoxContainer" unique_id=649783683]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_e6am6")
+theme_override_font_sizes/font_size = 32
+text = "REINTENTAR"
+
+[node name="Quit" type="Button" parent="GameOver/ColorRect/CenterContainer/VBoxContainer" unique_id=192814996]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_e6am6")
+theme_override_font_sizes/font_size = 32
+text = "RENDIRSE"
+
+[connection signal="pressed" from="Control/NumberPanel/CenterContainer/Clear" to="." method="_on_clear_pressed"]
 [connection signal="pressed" from="Control/NumPad/GridContainer/Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Control/NumPad/GridContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Control/NumPad/GridContainer/Button3" to="." method="_on_button_3_pressed"]
@@ -190,3 +285,4 @@ wait_time = 90.0
 [connection signal="pressed" from="Control/NumPad/GridContainer/Button9" to="." method="_on_button_9_pressed"]
 [connection signal="pressed" from="Control/NumPad/GridContainer/Button0" to="." method="_on_button_0_pressed"]
 [connection signal="pressed" from="Control/NumPad/GridContainer/ButtonA" to="." method="_on_button_a_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
