@@ -4,6 +4,7 @@ extends Node2D
 @onready var timer: Timer = $Timer
 @onready var timer_bar: ProgressBar = $Control/TimerBar/TimerBarProgress
 @onready var timer_bar_label: Label = $Control/TimerBar/TimerBarLabel
+@onready var timer_to_show_victory: Timer = $Control/TimerToShowVictory
 
 @onready var info_label: Label = $Control/Info/CenterContainer/InfoLabel
 
@@ -32,6 +33,8 @@ var punishable: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	password_num = randi_range(0, 9999)
+	# DEBUG
+	print(password_num)
 	if password_num == 0: 
 		password = "0000"
 	elif password_num < 10:
@@ -80,6 +83,7 @@ func evaluate() -> void:
 	else:
 		info_label.text = "MATCH :: INICIANDO SOBREESCRITURA"
 		info_label.add_theme_color_override("font_color", Color("#00AA00"))
+		game_over(false)
 
 	punishable = false
 	update_labels_state()
@@ -99,14 +103,17 @@ func clean_guess() -> void:
 
 func punish() -> void:
 	if punishable:
-		var punish_value: float = randf_range(0,(timer.time_left/5))*difficulty
+		var punish_value: float = randf_range(0,(timer.time_left/5))*difficulty/2
 		# DEBUG
 		#print("Castigo: " + str(punish_value).pad_decimals(2) + "s")
 		timer.wait_time = timer.time_left - punish_value
 		timer.start()
 
-func game_over() -> void:
-	game_over_screen.show()
+func game_over(status: bool) -> void:
+	if status:
+		game_over_screen.show()
+	else:
+		timer_to_show_victory.start()
 
 # Numerical Button Handler
 func handle_button_press(entry_type: String) -> void:
@@ -132,5 +139,9 @@ func _on_button_a_pressed() -> void: evaluate()
 
 func _on_clear_pressed() -> void: clean_guess()
 
-func _on_timer_timeout() -> void:
-	game_over()
+func _on_timer_timeout() -> void: game_over(true)
+
+func _on_restart_pressed() -> void: get_tree().reload_current_scene()
+
+func _on_timer_to_show_victory_timeout() -> void:
+	get_tree().change_scene_to_file("res://scenes/main.tscn")

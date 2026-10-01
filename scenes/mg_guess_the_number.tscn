@@ -210,8 +210,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "#"
 
+[node name="TimerToShowVictory" type="Timer" parent="Control" unique_id=533107558]
+wait_time = 3.0
+one_shot = true
+
 [node name="Timer" type="Timer" parent="." unique_id=1758995358]
-wait_time = 90.0
+wait_time = 120.0
 one_shot = true
 
 [node name="GameOver" type="Control" parent="." unique_id=308201654]
@@ -285,4 +289,6 @@ text = "RENDIRSE"
 [connection signal="pressed" from="Control/NumPad/GridContainer/Button9" to="." method="_on_button_9_pressed"]
 [connection signal="pressed" from="Control/NumPad/GridContainer/Button0" to="." method="_on_button_0_pressed"]
 [connection signal="pressed" from="Control/NumPad/GridContainer/ButtonA" to="." method="_on_button_a_pressed"]
+[connection signal="timeout" from="Control/TimerToShowVictory" to="." method="_on_timer_to_show_victory_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="GameOver/ColorRect/CenterContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
