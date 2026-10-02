@@ -1,3 +1,94 @@
 [gd_scene format=3 uid="uid://dkdtrajeqq0v7"]
 
+[ext_resource type="Script" uid="uid://ci4ixb7i1wl33" path="res://scripts/mg_goto_finish_line.gd" id="1_n7ewk"]
+[ext_resource type="FontFile" uid="uid://48g51questg8" path="res://fonts/monofonto rg.otf" id="2_jh0y2"]
+
 [node name="GameAdmin" type="Node2D" unique_id=1199970276]
+script = ExtResource("1_n7ewk")
+
+[node name="Control" type="Control" parent="." unique_id=208707684]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Maze" type="ColorRect" parent="Control" unique_id=28798632]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 400.0
+offset_bottom = 400.0
+
+[node name="MazeMap" type="GridContainer" parent="Control/Maze" unique_id=1218181280]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=1030318701]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 425.0
+offset_right = 425.0
+offset_bottom = 465.0
+
+[node name="TimeLeftBar" type="ProgressBar" parent="Control/CenterContainer" unique_id=683397731]
+custom_minimum_size = Vector2(400, 10)
+layout_mode = 2
+show_percentage = false
+
+[node name="TimeLeftLabel" type="Label" parent="Control/CenterContainer" unique_id=866832521]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_jh0y2")
+theme_override_font_sizes/font_size = 18
+text = "Time Left"
+
+[node name="Moves" type="CenterContainer" parent="Control" unique_id=148441972]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 0
+offset_left = 25.0
+offset_top = 470.0
+offset_right = 425.0
+offset_bottom = 770.0
+
+[node name="GridContainer" type="GridContainer" parent="Control/Moves" unique_id=1286873114]
+layout_mode = 2
+columns = 3
+
+[node name="Move1" type="Button" parent="Control/Moves/GridContainer" unique_id=1377959423]
+custom_minimum_size = Vector2(130, 65)
+layout_mode = 2
+
+[node name="Move2" type="Button" parent="Control/Moves/GridContainer" unique_id=740242312]
+custom_minimum_size = Vector2(130, 65)
+layout_mode = 2
+
+[node name="Move3" type="Button" parent="Control/Moves/GridContainer" unique_id=367883868]
+custom_minimum_size = Vector2(130, 65)
+layout_mode = 2
+
+[node name="Move4" type="Button" parent="Control/Moves/GridContainer" unique_id=310406134]
+custom_minimum_size = Vector2(130, 65)
+layout_mode = 2
+
+[node name="Move5" type="Button" parent="Control/Moves/GridContainer" unique_id=1785533546]
+custom_minimum_size = Vector2(130, 65)
+layout_mode = 2
+
+[node name="Move6" type="Button" parent="Control/Moves/GridContainer" unique_id=1660547538]
+custom_minimum_size = Vector2(130, 65)
+layout_mode = 2
+
+[node name="Move7" type="Button" parent="Control/Moves/GridContainer" unique_id=917119492]
+custom_minimum_size = Vector2(130, 65)
+layout_mode = 2
+
+[node name="Move8" type="Button" parent="Control/Moves/GridContainer" unique_id=1482976707]
+custom_minimum_size = Vector2(130, 65)
+layout_mode = 2
+
+[node name="Move9" type="Button" parent="Control/Moves/GridContainer" unique_id=645468325]
+custom_minimum_size = Vector2(130, 65)
+layout_mode = 2
+
+[node name="Timer" type="Timer" parent="." unique_id=1635096389]
+wait_time = 120.0

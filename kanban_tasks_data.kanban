@@ -15,7 +15,8 @@
 				"81572d4b-7ca6-4e6c-a99e-81b25947db79",
 				"b40abfb6-0bb2-4708-8e68-a19bee211484",
 				"c8ec085b-f778-46bc-9688-f96e6dfda189",
-				"1e87cde3-de99-486b-82ff-64ead6c2900a"
+				"1e87cde3-de99-486b-82ff-64ead6c2900a",
+				"ed4ec183-b098-4ea0-b1d9-65d214151cb1"
 			]
 		},
 		{
@@ -62,6 +63,13 @@
 			"uuid": "1e87cde3-de99-486b-82ff-64ead6c2900a",
 			"title": "Quemar Identidad",
 			"description": "Cuando alcanzas un máximo de alerta, puedes partir de 0, con una nueva identidad, esto te da prestigio y te ofrece repetir el ciclo de juego para llegar cada vez más lejos.",
+			"category": "f12eb4b5-d513-4d21-a36a-4fdd30cf1bf2",
+			"steps": []
+		},
+		{
+			"uuid": "ed4ec183-b098-4ea0-b1d9-65d214151cb1",
+			"title": "Colors",
+			"description": "black\t\t\t\t#000000\ndark_blue\t\t#0000AA\ndark_green\t \t#00AA00\ndark_aqua\t\t#00AAAA\ndark_red\t\t\t#AA0000\ndark_purple\t#AA00AA\ngold\t\t\t\t\t#FFAA00\ngray\t\t\t\t\t#AAAAAA\ndark_gray\t\t#555555\nblue\t\t\t\t\t#5555FF\ngreen\t\t\t\t#55FF55\naqua\t\t\t\t#55FFFF\nred\t\t\t\t\t#FF5555\nlight_purple\t\t#FF55FF\nyellow\t\t\t\t#FFFF55\nwhite\t\t\t\t#FFFFFF\n\n",
 			"category": "f12eb4b5-d513-4d21-a36a-4fdd30cf1bf2",
 			"steps": []
 		}
