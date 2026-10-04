@@ -16,6 +16,8 @@ extends Node2D
 
 var maze: Array[Array]
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	time_left_bar.max_value = timer.wait_time
@@ -31,7 +33,7 @@ func generate_maze(size: int = 8) -> void:
 	for i in range(size):
 		var maze_row: Array[String]
 		for j in range(size):
-			maze_row.append("n")
+			maze_row.append("·")
 		maze.append(maze_row)
 
 	# Poblate the maze
@@ -43,22 +45,35 @@ func generate_maze(size: int = 8) -> void:
 		print(maze[col])
 
 func poblate(row: int, col: int, size: int) -> void:
-	var new_cell: String = "n"
+	var new_cell: String = "·"
 	var posible_cells: Array[String]
+	var conections: Array[int] = [0,0,0,0] # up, right, down, left
 	# Defining the Starting Point
 	if col + row == 0:
 		match randi_range(0,2):
-			0: new_cell = "0"
-			1: new_cell = "1"
-			2: new_cell = "4"
+			0: new_cell = "→"
+			1: new_cell = "↓"
+			2: new_cell = "╔"
 
 	# First row Restriction evaluate x-1, x+1, y-1
 	elif row == 0:
-		evaluate_neighbor(row, col, "left", posible_cells)
-		pass
+		conections[1] = evaluate_neighbor(row,col,"right")
 	
 	maze[col][row] = new_cell
 
-func evaluate_neighbor(row: int, col: int,neighbor: String, cell_list: Array[String]) -> void:
+func evaluate_neighbor(row: int, col: int,neighbor: String) -> int:
+	var neighbor_status: int = 0 # 0:no connection, 1:need connection, 2:open to connection
+	if neighbor == "up":
+		if maze[col-1][row] == "·":
+			neighbor_status = 2
+		elif maze[col-1][row] in "╗╔╦↑║╣╠╬":
+			neighbor_status = 1
 	
-	pass
+	if neighbor == "right":
+		if maze[col][row+1] == "·":
+			neighbor_status = 2
+		elif maze[col][row+1] in "":
+			neighbor_status = 1
+	
+	return neighbor_status
+# Maze Symbols · ← ↓ ╗ → ═ ╔ ╦ ↑ ╝ ║ ╣ ╚ ╩ ╠ ╬
