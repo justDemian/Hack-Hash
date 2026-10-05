@@ -41,8 +41,8 @@ func generate_maze(size: int = 8) -> void:
 		for col in range(size):
 			poblate(row, col, size)
 
-	for col in range(size):
-		print(maze[col])
+	for row in range(size):
+		print(maze[row])
 
 func poblate(row: int, col: int, size: int) -> void:
 	var new_cell: String = "·"
@@ -55,46 +55,105 @@ func poblate(row: int, col: int, size: int) -> void:
 			1: new_cell = "↓"
 			2: new_cell = "╔"
 
-	# First row Restriction evaluate x-1, x+1, y+1
+	# Restriction of the up side of the maze
 	elif row == 0:
 		if col != size-1:
 			connections[1] = evaluate_neighbor(row,col,"right")
 		connections[2] = evaluate_neighbor(row,col,"down")
 		connections[3] = evaluate_neighbor(row,col,"left")
 	
-	# Last col restriction evaluate x-1 , y-1 , y+1
+	# Restriction of the down side of the maze
 	elif row == size-1:
 		connections[0] = evaluate_neighbor(row,col,"up")
 		if col != size-1:
-			connections[2] = evaluate_neighbor(row,col,"down")
+			connections[2] = evaluate_neighbor(row,col,"right")
 		connections[3] = evaluate_neighbor(row,col,"left")
+	
+	# Restriction of the left side of the maze
+	elif col == 0:
+		connections[0] = evaluate_neighbor(row,col,"up")
+		connections[1] = evaluate_neighbor(row,col,"right")
+		connections[2] = evaluate_neighbor(row,col,"down")
+	
+	# Restriction of the right side of the maze
+	elif col == size-1:
+		connections[0] = evaluate_neighbor(row,col,"up")
+		connections[2] = evaluate_neighbor(row,col,"down")
+		connections[3] = evaluate_neighbor(row,col,"left")
+	
+	# Unrestricted evaluation in case of the filter didnt catch anything
+	else:
+		connections[0] = evaluate_neighbor(row,col,"up")
+		connections[1] = evaluate_neighbor(row,col,"right")
+		connections[2] = evaluate_neighbor(row,col,"down")
+		connections[3] = evaluate_neighbor(row,col,"left")
+	
+	# Asignation of the value of the cell // UP - RIGHT - DOWN - LEFT
+	match connections:
+		# Arbitrary
+		[0,0,0,0]: new_cell = " "
+		[0,0,0,1]: new_cell = "→"
+		[0,0,1,0]: new_cell = "↑"
+		[0,0,1,1]: new_cell = "╗"
+		[0,1,0,0]: new_cell = "←"
+		[0,1,0,1]: new_cell = "═"
+		[0,1,1,0]: new_cell = "╔"
+		[0,1,1,1]: new_cell = "╦"
+		[1,0,0,0]: new_cell = "↓"
+		[1,0,0,1]: new_cell = "╝"
+		[1,0,1,0]: new_cell = "║"
+		[1,0,1,1]: new_cell = "╣"
+		[1,1,0,0]: new_cell = "╚"
+		[1,1,0,1]: new_cell = "╩"
+		[1,1,1,0]: new_cell = "╠"
+		[1,1,1,1]: new_cell = "╬"
+		# Pickeables
+		[0,0,0,2]: new_cell = "→"
+		[0,0,2,0]: new_cell = "↑"
+		[0,0,2,2]: posible_cells = ["↑","→","╗"]
+		[0,2,0,2]: new_cell = "←"
+		[0,2,0,2]: posible_cells = ["→","═","←"]
+		[0,2,2,0]: posible_cells = ["←","↑","╔"]
+		[0,2,2,2]: posible_cells = ["→","↑","╗","←","═","╔","╦"]
+		[2,0,0,0]: new_cell = "↓"
+		[2,0,0,2]: posible_cells = ["→","↓","╝"]
+		[2,0,2,0]: posible_cells = ["↑","↓","║"]
+		[2,0,2,2]: posible_cells = ["→","↑","╗","↓","╝","║","╣"]
+		[0,0,0,2]: new_cell = "←"
+		[0,0,0,2]: new_cell = "←"
+		[0,0,0,2]: new_cell = "←"
+		[0,0,0,2]: new_cell = "←"
+		[0,0,0,2]: new_cell = "←"
+		
+
+# Maze Symbols · → ↑ ╗ ← ═ ╔ ╦ ↓ ╝ ║ ╣ ╚ ╩ ╠ ╬
 	
 	maze[col][row] = new_cell
 
 func evaluate_neighbor(row: int, col: int,neighbor: String) -> int:
 	var neighbor_status: int = 0 # 0:no connection, 1:need connection, 2:open to connection
 	if neighbor == "up":
-		if maze[col-1][row] == "·":
+		if maze[row-1][col] == "·":
 			neighbor_status = 2
-		elif maze[col-1][row] in "╗╔╦↑║╣╠╬":
+		elif maze[row-1][col] in "╗╔╦↑║╣╠╬":
 			neighbor_status = 1
 	
 	if neighbor == "right":
-		if maze[col][row+1] == "·":
+		if maze[row][col+1] == "·":
 			neighbor_status = 2
 		elif maze[col][row+1] in "╗→═╦╝╣╩╬":
 			neighbor_status = 1
 	
 	if neighbor == "down":
-		if maze[col+1][row] == "·":
+		if maze[row+1][col] == "·":
 			neighbor_status = 2
-		elif maze[col+1][row] in "↓╝║╣╚╩╠╬":
+		elif maze[row+1][col] in "↓╝║╣╚╩╠╬":
 			neighbor_status = 1
 	
 	if neighbor == "left":
-		if maze[col+1][row] == "·":
+		if maze[row][col-1] == "·":
 			neighbor_status = 2
-		elif maze[col+1][row] in "←═╔╦╚╩╠╬":
+		elif maze[row][col-1] in "←═╔╦╚╩╠╬":
 			neighbor_status = 1
 	
 	return neighbor_status

@@ -11,6 +11,7 @@
 			"uuid": "5e054e1f-f093-45aa-acc6-038bc18df787",
 			"title": "Todo",
 			"tasks": [
+				"1c9f4bb5-4b22-47df-999d-c55a34a96419",
 				"a33d4196-9eb8-4eb8-b3cd-2478d4711cd5",
 				"81572d4b-7ca6-4e6c-a99e-81b25947db79",
 				"b40abfb6-0bb2-4708-8e68-a19bee211484",
@@ -70,6 +71,13 @@
 			"uuid": "ed4ec183-b098-4ea0-b1d9-65d214151cb1",
 			"title": "Colors",
 			"description": "black\t\t\t\t#000000\ndark_blue\t\t#0000AA\ndark_green\t \t#00AA00\ndark_aqua\t\t#00AAAA\ndark_red\t\t\t#AA0000\ndark_purple\t#AA00AA\ngold\t\t\t\t\t#FFAA00\ngray\t\t\t\t\t#AAAAAA\ndark_gray\t\t#555555\nblue\t\t\t\t\t#5555FF\ngreen\t\t\t\t#55FF55\naqua\t\t\t\t#55FFFF\nred\t\t\t\t\t#FF5555\nlight_purple\t\t#FF55FF\nyellow\t\t\t\t#FFFF55\nwhite\t\t\t\t#FFFFFF\n\n",
+			"category": "f12eb4b5-d513-4d21-a36a-4fdd30cf1bf2",
+			"steps": []
+		},
+		{
+			"uuid": "1c9f4bb5-4b22-47df-999d-c55a34a96419",
+			"title": "Full Idea",
+			"description": "CAMBIO DRÁSTICO\nHack and Slash, con minijuegos y relación a la sátira cyberseguristica según la representa hollywood",
 			"category": "f12eb4b5-d513-4d21-a36a-4fdd30cf1bf2",
 			"steps": []
 		}
