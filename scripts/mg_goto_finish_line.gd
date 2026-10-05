@@ -47,7 +47,7 @@ func generate_maze(size: int = 8) -> void:
 func poblate(row: int, col: int, size: int) -> void:
 	var new_cell: String = "·"
 	var posible_cells: Array[String]
-	var conections: Array[int] = [0,0,0,0] # up, right, down, left
+	var connections: Array[int] = [0,0,0,0] # up, right, down, left
 	# Defining the Starting Point
 	if col + row == 0:
 		match randi_range(0,2):
@@ -55,9 +55,19 @@ func poblate(row: int, col: int, size: int) -> void:
 			1: new_cell = "↓"
 			2: new_cell = "╔"
 
-	# First row Restriction evaluate x-1, x+1, y-1
+	# First row Restriction evaluate x-1, x+1, y+1
 	elif row == 0:
-		conections[1] = evaluate_neighbor(row,col,"right")
+		if col != size-1:
+			connections[1] = evaluate_neighbor(row,col,"right")
+		connections[2] = evaluate_neighbor(row,col,"down")
+		connections[3] = evaluate_neighbor(row,col,"left")
+	
+	# Last col restriction evaluate x-1 , y-1 , y+1
+	elif row == size-1:
+		connections[0] = evaluate_neighbor(row,col,"up")
+		if col != size-1:
+			connections[2] = evaluate_neighbor(row,col,"down")
+		connections[3] = evaluate_neighbor(row,col,"left")
 	
 	maze[col][row] = new_cell
 
@@ -72,7 +82,19 @@ func evaluate_neighbor(row: int, col: int,neighbor: String) -> int:
 	if neighbor == "right":
 		if maze[col][row+1] == "·":
 			neighbor_status = 2
-		elif maze[col][row+1] in "":
+		elif maze[col][row+1] in "╗→═╦╝╣╩╬":
+			neighbor_status = 1
+	
+	if neighbor == "down":
+		if maze[col+1][row] == "·":
+			neighbor_status = 2
+		elif maze[col+1][row] in "↓╝║╣╚╩╠╬":
+			neighbor_status = 1
+	
+	if neighbor == "left":
+		if maze[col+1][row] == "·":
+			neighbor_status = 2
+		elif maze[col+1][row] in "←═╔╦╚╩╠╬":
 			neighbor_status = 1
 	
 	return neighbor_status
