@@ -7,7 +7,63 @@ Llaman a exterminadores de todo el catálogo de teléfono y no encuentran nada, 
 
 Explora el sistema operativo de las computadoras y liberalas una a una, enfrentandote a diferentes virus.
 
+## INDICE
+bLAH blha BLAH
+
+# Proceso del Desarrollo
+### Historia
+**[PEND] Introducción** 
+**[PEND] Inicio**
+**[PEND] Presentación del Villano** 
+**[PEND] Desarrollo**
+**[PEND] Final**
+
+### Programación
+**[PEND] Crear Entorno**
+**[PEND] Mecánicas de Combate**
+**[PEND] Cinemáticas**
+**[PEND] Diálogos**
+**[PEND] Entrar y Salir del Sistema**   
+**[PEND] Guardado**
+**[PEND] Generación de Armas**
+**[PEND] Sistema de Inventario**   
+
+### Arte
+**[PEND] Creación de Sprites**
+**[PEND] Sounding**
+**[PEND] Diseño de Interfaz**
+**[PEND] Crear la Fuente Personalizada** 
+
+
 ## Mecánicas
+
+#### Principal
+El juego se desarrollará en 3 entornos, mundo exterior, mundo virtual y administración de la máquina.
+
+En el **mundo exterior** se desarrolla la historia inicial y sirve como "Lobby" además de este modo acceder a las mejoras comprables, además de funcionar como zona de guardado final, menu principal y cosas por el estilo.
+
+En este mundo puedes acceder a las compras de items para mejorar el computador, o sea mejoras permanentes y modificadores de la partida.
+
+Esto da paso a 4 conceptos nuevos de modificación de computadora
+
+* **Placa Madre** : Esto responde a la medida básica de Nivel, o sea, teniendo una Placa madre NV.2 Puedes acceder a las mejoras de Nivel 2 e Inferiores, pero no a las mejoras de nivel 3 o superiores. Además cada Placa madre tiene compatibilidad con los otros componentes, de modo que esta permite (dependiendo de la placa y su fabricante) conectar más perifericos, slots de ram, posibilidad de instalar una VRAM (late-game) mejoras de cpu, ventiladores y por el estilo
+
+* **Fuente de Poder** : A pesar de que la Placa Madre posea gran importancia de Acceso, agregar componentes mejores requiere una mayor fuente de poder.
+
+* **CPU** : Este componente representa la ganancia de experiencia y el árbol de Habilidades.
+
+* **RAM** : La memoria Ram modifica aspectos relacionados con el movimiento, daño de ataques y la resistencia (Para ataques especiales).
+
+* **Almacenamiento** : Este modifica aspectos relacionados con los HP, así es, la vida se mide en KB, MB, GB, TB y así. Por ende los ataques también se relacionan con esto, las HDD tienen mayor capacidad, mientras que las SDD regeneran vida más rápido.
+
+* **GPU** : Esto es un accesorio de mejora para los niveles más adelantados del juego, este modifica en gran medida todos los aspectos del juego. Agregando extras en diferentes Habilidades, trata de buscar siempre la mejor compatibilidad entre CPU y GPU.
+
+* **Perifericos** : Estos funcionan como consumibles recargables.
+
+* **Ventilación** : Estos disminuyen el tiempo de carga de los consumibles.
+
+
+
 #### Hack and Slash
 Una vez dentro el juego tendrá combate tipo hack and slash, donde deberás esquivar atacar y realizar una técnica recién en desarrollo "parrys" como el juego es en vista Top-Down no hay mecánica de salto.
 
@@ -32,28 +88,5 @@ El juego tiene 3 grandes escenarios.
 ## Desarrollo
 El juego está pensado para jugarse desde teléfono, por lo que mantener el juego lo más simple posible sin mecánicas que requieran mucho toqueteo de botones será mejor, de todas formas, incluir combos en base a las armas y herramientas que se tengan, sería increible.
 
-
-# Proceso del Desarrollo
-
-### Historia
-**[PEND] Introducción** 
-**[PEND] Inicio**
-**[PEND] Presentación del Villano** 
-**[PEND] Desarrollo**
-**[PEND] Final**
-
-### Programación
-**[PEND] Crear Entorno**
-**[PEND] Mecánicas de Combate**
-**[PEND] Cinemáticas**
-**[PEND] Diálogos**
-**[PEND] Entrar y Salir del Sistema**   
-**[PEND] Guardado**
-**[PEND] Generación de Armas**
-**[PEND] Sistema de Inventario**   
-
-### Arte
-**[PEND] Creación de Sprites**
-**[PEND] Sounding**
-**[PEND] Diseño de Interfaz**
-**[PEND] Crear la Fuente Personalizada** 
+## Historia
+La historia se divide en 5 actos de juego
