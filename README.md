@@ -67,6 +67,8 @@ Esto da paso a 4 conceptos nuevos de modificación de computadora
 #### Hack and Slash
 Una vez dentro el juego tendrá combate tipo hack and slash, donde deberás esquivar atacar y realizar una técnica recién en desarrollo "parrys" como el juego es en vista Top-Down no hay mecánica de salto.
 
+Existirán 4 tipos de armas para que el jugador pueda elegir en base a su estilo de juego.
+
 #### Items Generados por Dados
 Como amante del Rol, todo estará generado en una tirada de dados virtual, de modo que se sienta como una experiencia tipo D&D o más bien algo como Borderlands, donde cada arma se compone de diferentes items que van cambiando su comportamiento.
 
