@@ -91,4 +91,7 @@ El juego tiene 3 grandes escenarios.
 El juego está pensado para jugarse desde teléfono, por lo que mantener el juego lo más simple posible sin mecánicas que requieran mucho toqueteo de botones será mejor, de todas formas, incluir combos en base a las armas y herramientas que se tengan, sería increible.
 
 ## Historia
-La historia se divide en 5 actos de juego
+#### Acto I
+Eres un estudiante de un pueblo pequeño, no eres particularmente bueno, por lo que un amigo de un amigo, te dijo que puedes modificar tus notas si te atreves desde la computadora de la sala de computación, sólo debes saber qué hacer, tus capacidades son nulas con la informática, por lo que se te ocurre ir a la biblioteca para aprender de un libro, sin encontrar ayuda, ocupas la computadora de la biblioteca para buscar ayuda en la internet, conoces a alguien que te menciona un curso digital en un disco, está dispuesto a vendertelo a buen precio, sólo debes encontrarte con este nuevo contacto en el estacionamiento de un supermercado, te pasa el disco, le pasas 25 doláres, transacción completa, como no tienes computador, lo usas en el pc de la escuela.
+
+Tenía virus...
