@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dj5whf7be6kuj"]
+
+[node name="Machine" type="Node2D" unique_id=311934038]
+
+[node name="ControlManager" type="Control" parent="." unique_id=282008804]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="ControlManager" unique_id=401248563]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "[IBN T3 I gen] PLACA MADRE"
