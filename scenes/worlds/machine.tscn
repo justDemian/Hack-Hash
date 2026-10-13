@@ -8,8 +8,50 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="ControlManager" unique_id=401248563]
+[node name="MotherBoardButton" type="Button" parent="ControlManager" unique_id=401248563]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "[IBN T3 I gen] PLACA MADRE"
+offset_left = 472.0
+offset_top = 29.0
+offset_right = 857.0
+offset_bottom = 83.0
+text = "[PLACA MADRE]"
+
+[node name="RAMButton" type="Button" parent="ControlManager" unique_id=1109241670]
+layout_mode = 0
+offset_left = 1051.0
+offset_top = 194.0
+offset_right = 1206.0
+offset_bottom = 412.0
+text = "[RAM]"
+
+[node name="CPUButton" type="Button" parent="ControlManager" unique_id=98456051]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 107.0
+offset_right = 323.0
+offset_bottom = 266.0
+text = "[CPU]"
+
+[node name="PowerButton" type="Button" parent="ControlManager" unique_id=1532040492]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 498.0
+offset_right = 364.0
+offset_bottom = 662.0
+text = "[FUENTE DE PODER]"
+
+[node name="StorageButton" type="Button" parent="ControlManager" unique_id=430470987]
+layout_mode = 0
+offset_left = 727.0
+offset_top = 504.0
+offset_right = 1203.0
+offset_bottom = 641.0
+text = "[Almacenamiento]"
+
+[node name="VentilationButton" type="Button" parent="ControlManager" unique_id=967982691]
+layout_mode = 0
+offset_left = 999.0
+offset_top = 38.0
+offset_right = 1209.0
+offset_bottom = 142.0
+text = "[VENTILACIÓN]"
