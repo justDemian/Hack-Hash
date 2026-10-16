@@ -22,3 +22,7 @@ Se premia a la Exploración y la resolución de acertijos.
 
 ### Estética RETRO & FRUTIGER
 Vamos, intento de darle una esencia única al juego.
+
+## Desglose de Mecánicas
+Enfrentarse a enemigos: 
+Existen 4 tipos de enemigos, cada uno con su comportamiento, su propia inteligencia y diferentes atributos.
