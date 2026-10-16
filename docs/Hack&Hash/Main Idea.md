@@ -12,3 +12,13 @@ Cada bloqueo propiamente tal requerirá nuevas herramientas, al puro estilo metr
 
 ### Nivel Enemigo
 Al derrotar enemigos subes de nivel, pero los enemigos también tienen su nivel, de modo que enfrentarte a enemigos de niveles más altos, implica así que las recompensas serán propias al nivel enemigo, pero será más desafiante.
+
+## Pilares
+### Farmeo de Loot
+Lo primordial, es el Loot, esa sensación de hacerse fuerte.
+
+### Puzzles
+Se premia a la Exploración y la resolución de acertijos.
+
+### Estética RETRO & FRUTIGER
+Vamos, intento de darle una esencia única al juego.
