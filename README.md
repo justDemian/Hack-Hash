@@ -96,7 +96,7 @@ Eres un estudiante de un pueblo pequeño, no eres particularmente bueno, por lo 
 
 Tenía virus...
 
-D*m*****y
-Demiancry X
-Demianthy X
-Dem
+# IDEAS MECÁNICAS
+Instalation Wizard = El mago de oz, guardián del mundo
+
+Sección complicada donde hay tiempo limitado, cambiar pasta termica para evitar sufrir daños.
